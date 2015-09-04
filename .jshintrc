@@ -1,6 +1,13 @@
-{ 
+{
+  "varstmt": true,
+  "unused": true,
+  "undef": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "indent": 2,
+  "maxparams": 4,
+  "maxdepth": 4,
   "maxstatements": 15,
-  "maxdepth": 2,
-  "maxcomplexity": 5,
-  "laxcomma": true
+  "maxcomplexity": 6,
+  "esnext": true
 }
