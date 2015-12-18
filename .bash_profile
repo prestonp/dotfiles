@@ -14,7 +14,7 @@ STARTCOLOR="\e[0;36m";
 ENDCOLOR="\e[0m";
 
 set_bash_prompt() {
-  export PS1="$STARTCOLOR\d \t \u:\w\$(__git_ps1 ' (%s)') $ENDCOLOR\n$(emoji)  $RESET"
+  export PS1="$STARTCOLOR\d \t \u:\w\$(__git_ps1 ' (%s)') $ENDCOLOR\n$(emoji)  "
 }
 
 # Terminal prompt formatting
