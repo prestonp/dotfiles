@@ -31,3 +31,5 @@ alias gd='git diff --color'
 # Postgres path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
+# Autocomplete Makefile
+ complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
