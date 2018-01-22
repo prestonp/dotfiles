@@ -32,4 +32,9 @@ alias gd='git diff --color'
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Autocomplete Makefile
- complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
+complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
+
+# Vertical docker ps
+export DOCKER_FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+alias dps='docker ps --format="$DOCKER_FORMAT"'
+
