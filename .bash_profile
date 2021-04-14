@@ -38,3 +38,5 @@ complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9
 export DOCKER_FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 alias dps='docker ps --format="$DOCKER_FORMAT"'
 
+# pushtmp is similar to pushd but with a temp dir, popd afterwards like usual
+alias pushtmp='pushd $(mktemp -d)'
